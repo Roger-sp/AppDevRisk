@@ -45,8 +45,8 @@ O código será baseado em princípios de Programação Orientada a Objetos (POO
 
 1. Interface ITrade: Define as propriedades de uma operação.
 2. Classe Trade: Implementa a interface ITrade e armazena as propriedades.
-3. Classe CategoryRule: Uma classe base para as regras de classificação.
-4. Regras de Categoria: ExpiredCategoryRule, HighRiskCategoryRule, MediumRiskCategoryRule.
+3. Classe Categorization: Uma classe base para as regras de classificação.
+4. Regras de Categoria: Expired, HighRisk, MediumRisk.
 5. Classe Portfolio: Contém as regras de categorização, além de permitir o CRUD de categorias.
 6. Classe Program: Gerencia a entrada de dados, a lógica de categorização e o CRUD de categorias
  
@@ -61,22 +61,22 @@ Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar 
 
 1. Interface ITrade define a estrutura de uma operação.
 2. Classe Trade implementa a interface ITrade e representa uma operação.
-3. Classe CategoryRule serve como base para as regras de categorização das operações.
-4. Regras específicas: ExpiredCategoryRule, HighRiskCategoryRule e MediumRiskCategoryRule são implementações das regras de categorização.
+3. Classe Categorization serve como base para as regras de categorização das operações.
+4. Regras específicas: Expired, HighRisk e Medium são implementações das regras de categorização.
 5. Classe Portfolio gerencia a lista de regras de categorização e permite a manipulação dessas regras (CRUD).
 6. Classe Program gerencia a entrada de dados e oferece um menu interativo para que o usuário possa adicionar, remover, ou atualizar regras de categorização.
 
 > [!NOTE] 
-> Como funciona o CRUD de Categorias (categorias existentes, a saber: ExpiredCategoryRule, HighRiskCategoryRule e  MediumRiskCategoryRule)
+> Como funciona o CRUD de Categorias (categorias existentes, a saber: Expired, HighRisk e  MediumRisk)
 
-Adicionar categoria: O usuário pode adicionar novas categorias especificando o nome da classe da regra (exemplo: ExpiredCategoryRule).
+Adicionar categoria: O usuário pode adicionar novas categorias especificando o nome da classe da regra (exemplo: Expire).
 Remover categoria: O usuário pode remover uma categoria fornecendo o índice da regra.
 Atualizar categoria: O usuário pode atualizar uma categoria existente, substituindo-a por outra.
 
 > [!WARNING]
 🚨🚨🚨 Como adicionar novas categorias no futuro:
 
-1. Criar uma nova classe que herda de CategoryRule e implementar o método Category.
+1. Criar uma nova classe que herda de CategoryCategorizatione implementar o método Category.
 2. Adicionar a nova regra à lista de regras na classe Portfolio.
 
 ### 🔧 Instalação
